@@ -1,0 +1,135 @@
+.reveal .one {
+  text-align: left;
+}
+.reveal .one > h1 {
+  text-transform: capitalize;
+}
+.reveal .one > h1 > span {
+  font-size: 75%;
+  text-transform: lowercase;
+}
+.reveal .one > h3 {
+  text-transform: none;
+}
+.reveal .one > h5 {
+  text-transform: none;
+}
+.reveal .one > .jim {
+  color: #c7c7c7;
+  margin-top: 250px;
+}
+.reveal .one > div > img {
+  position: absolute;
+  right: 0;
+  bottom: -100px;
+  width: 600px;
+}
+
+.reveal .two > img {
+  position: absolute;
+  max-width:500px;
+}
+.reveal .two > h1 {
+  height: 600px;
+  padding-top: 300px;
+}
+.reveal .two > .koa {
+  left: 0;
+  top: 0;
+}
+.reveal .two > .hapi {
+  right: 0;
+  top: 0;
+}
+.reveal .two > .angular {
+  right: 0;
+  bottom: 0;
+}
+.reveal .two > .react {
+  left: 0;
+  bottom: 0;
+}
+
+.reveal .three > h1 {
+  text-transform: none;
+  height: 1100px;
+}
+.reveal .three > img {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  left: 25px;
+}
+
+.reveal .four > h1 {
+  text-transform: none;
+}
+
+.reveal .twelve > h1 {
+  text-transform: none;
+  margin-top: 250px;
+}
+.reveal .twelve > h3 {
+  text-transform: none;
+}
+
+.reveal .thirteen > h1 {
+  text-transform: none;
+}
+
+.reveal .fourteen > h1 {
+  text-transform: none;
+}
+.reveal .fourteen > div > img {
+  width: 100%;
+}
+
+.reveal .fifteen > h1 {
+  text-transform: none;
+}
+.reveal .fifteen > .water {
+  margin-top: 150px;
+}
+
+.reveal .sixteen > h1 {
+  text-transform: none;
+}
+
+.reveal .seventeen > h1 {
+  text-transform: none;
+}
+.reveal .seventeen > pre code {
+  max-height: 800px;
+}
+.reveal .seventeen .bench {
+  width: 550px;
+  margin: 0 auto;
+}
+.reveal .seventeen .bench > img {
+  width: 100%;
+}
+
+.reveal .eighteen > h1 {
+  text-transform: none;
+}
+.reveal .eighteen > div > img {
+  width: 850px;
+}
+
+.reveal .nineteen > h1 {
+  text-transform: none;
+}
+.reveal .nineteen > div > img {
+  width: 900px;
+}
+
+.reveal .twenty > h1 {
+  text-transform: none;
+}
+
+.reveal .twentyone > h1 {
+  text-transform: none;
+}
+.reveal .twentyone > div > img {
+  width: 400px;
+}

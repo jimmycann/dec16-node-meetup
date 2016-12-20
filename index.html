@@ -1,0 +1,408 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Convention vs. Configuration with SailsJS</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section class="one">
+          <h1>Convention <span>vs.</span></h1>
+          <h1>Configuration</h1>
+          <span>Why your opinionated friends might be better for you.</span>
+          <p class="jim">Jimmy Cann - @yjimk</p>
+          <div class="">
+            <img data-src="media/s1.png">
+          </div>
+          <aside class="notes">
+            Welcome.<br>
+            Introduce yourself<br>
+            Speaking at one of these events has been a goal of mine since<br>
+            So really excited to be here<br>
+            Work for Doshii<br>
+            Currently hiring
+          </aside>
+
+        </section>
+
+				<section class="two">
+
+          <h1>FRAMEWORKS</h1>
+          <img data-src="media/koa.png" class="fragment koa" />
+          <img data-src="media/hapi.png" class="fragment hapi" />
+          <img data-src="media/react.png" class="fragment react" />
+          <img data-src="media/angular.png" class="fragment angular" />
+
+          <aside class="notes">
+            Lets start by talking about<br>
+            There are a lot of them BE and FE<br>
+            Can be source contention
+          </aside>
+        </section>
+
+        <section class="three">
+          <h1>Frameworks Are Controversial</h1>
+          <img data-src="media/a1t.png" class="fragment" />
+          <img data-src="media/a2t.png" class="fragment" />
+          <img data-src="media/rt.png" class="fragment" />
+          <img data-src="media/nt.png" class="fragment" />
+          <img data-src="media/st.png" class="fragment" />
+          <aside class="notes">
+            Any framework/language that's big enough will get haters<br>
+            Purpose here not to shame anyone for using some tools<br>
+          </aside>
+        </section>
+
+        <section class="four">
+          <h1>Code is like love.</h1>
+          <h1>It is created with clear intentions, but quickly gets complicated.</h1>
+          <aside class="notes">
+            Right tool for the job<br>
+            Indiv/Team Coding preference<br>
+            Achievement over technical
+          </aside>
+        </section>
+
+        <section class="five">
+          <img data-src="media/s2.png"/>
+          <div>
+            <img data-src="media/bkgd_squiddy.png"/>
+          </div>
+          <aside class="notes">
+            SO<br>
+            Show of hands<br>
+            For those who are unfamiliar
+          </aside>
+        </section>
+
+        <section class="six">
+          <img data-src="media/s2.png"/>
+          <h1>==</h1>
+          <img data-src="media/rails.png"/>
+          <p class="fragment">(See what they did there?)</p>
+          <aside class="notes">
+            Sails is basically an intereperetation of Rails for JS<br>
+            Rails Devs - principles familiar<br>
+            Convention Method<br>
+            Meaning framework has set config based on their perception of best practices<br>
+            Generally need to adhere<br>
+          </aside>
+        </section>
+
+        <section class="five">
+          <img data-src="media/s2.png"/>
+          <div>
+            <img data-src="media/ayo1.png"/>
+          </div>
+          <aside class="notes">
+            Like that strict, opinionated friend you have<br>
+            Straying means silent treatment, stern look<br>
+            If you don't have a friend like this, then you're probs this friend
+          </aside>
+        </section>
+
+        <section class="seven">
+          <img data-src="media/express.png"/>
+          <div class="fragment">
+            <img data-src="media/wolf1.jpg"/>
+          </div>
+          <aside class="notes">
+            Ubiquitous in Node<br>
+            Everyone here prob used<br>
+            Express about config<br>
+            Here are some tools, now go w/ crazy friend<br>
+            So just how different is Sails?
+          </aside>
+        </section>
+
+        <section class="eight">
+          <img data-src="media/s2.png"/>
+          <h1>==</h1>
+          <img data-src="media/express.png"/>
+          <aside class="notes">
+            Wha?<br>
+            Sort of<br>
+            Express is one of Sails' dependencies<br>
+            Sails acts as a layer on top
+          </aside>
+        </section>
+
+        <section class="nine">
+          <img data-src="media/s2.png"/>
+          <h1>==</h1>
+          <h1>Connect</h1>
+          <span>(What? No logo?)</span>
+          <aside class="notes">
+            Closer<br>
+            Connect is also a dependency
+          </aside>
+        </section>
+
+        <section class="ten">
+          <img data-src="media/s2.png"/>
+          <h1>==</h1>
+          <img data-src="media/express.png"/>
+          <h1>==</h1>
+          <h1>Connect</h1>
+          <aside class="notes">
+            I don't know anymore<br>
+            Basically, it's a synergy<br>
+            Sails represents an interperetation of how Express should be engineered
+            Because Sails is built on Connect, middleware works.
+          </aside>
+        </section>
+
+        <section class="twelve">
+          <h1>If Sails is just like Express</h1>
+          <h3>Why can't I just use Express and configure it how I want?</h3>
+          <aside class="notes">
+            Of course you can<br>
+            When you reach scale app design decisions can haunt you<br>
+            No hard and fast defined set of best practices<br>
+            Out of the box, Sails makes those decisions for you<br>
+            Sails not perfect, let's look at some key points
+          </aside>
+        </section>
+
+        <section class="thirteen">
+          <h1>Install</h1>
+          <pre class="fragment"><code data-trim data-noescape>
+$ yarn add sails global
+// For our NPMers
+$ npm i -g sails
+          </code></pre>
+          <span class="fragment">Another global? Gah!</span>
+          <span class="fragment">then...</span>
+          <pre class="fragment"><code data-trim data-noescape>
+$ sails new my_sails_project
+$ cd my_sails_project
+$ sails lift
+
+# Alternatively
+
+$ node app.js
+          </code></pre>
+          <span class="fragment">https://yarnpkg.com</span>
+          <aside class="notes">
+            Yep install is a global, there are some convenience methods<br>
+            You don't HAVE to, I only use for sails lift. I suppose I could not.<br>
+            Wait, you are using Yarn right?<br>
+            Alright fine<br>
+            Yarn is much quicker at installing
+          </aside>
+        </section>
+
+        <section class="fourteen">
+          <h1>Community</h1>
+          <div class="fragment">
+            <img data-src="media/wolf2.jpg"/>
+          </div>
+          <aside class="notes">
+            Express is an order of magnitude larger<br>
+            and more up to date<br>
+            Sails SO examples a bit older<br>
+            PRs also a bit slower due smaller community
+          </aside>
+        </section>
+
+        <section class="fifteen">
+          <h1>Database / ORM</h1>
+          <div class="fragment water">
+            <img data-src="media/water1.png"/>
+          </div>
+          <p class="fragment">
+            (It's OK, I suppose)
+          </p>
+          <div class="fragment">
+            <img data-src="media/mossfire.gif" alt="">
+          </div>
+          <aside class="notes">
+            Let's get this out of the way<br>
+            Waterline<br>
+            It's bundled with Sails<br>
+            Many different hooks, Mongo, Postgres, MySQL<br>
+            Sounds great but not without issues<br>
+            Aggregating that many DBs is ambitious<br>
+            It's OK, hampering beyond a simple app
+          </aside>
+        </section>
+
+        <section class="sixteen">
+          <h1>Disabling Waterline</h1>
+          <p>
+            and installing Sequelize
+          </p>
+          <div class="fragment sailsrc">
+            <span>In project root, amend/create '.sailsrc'. You can also disable Grunt here</span>
+            <pre><code data-trim data-noescape>
+{
+  "hooks": {
+    "grunt": false,
+    "orm": false,
+    "pubsub": false
+  }
+}
+            </code></pre>
+          </div>
+          <div class="fragment">
+            <span>Install the Sequelize lib and Sails hook</span>
+            <pre class="fragment"><code data-trim data-noescape>
+  $ yarn add sequelize sails-hook-sequelize
+            </code></pre>
+          </div>
+          <div class="fragment">
+            Check out https://github.com/festo/sails-hook-sequelize
+          </div>
+          <aside class="notes">
+            This will disable Sails built in PubSub<br>
+            We'll use Sequelize in this example.<br>
+            Well tested and supported ORM for Node<br>
+            But could use any that's suitable for your DB, mongoose, thinky etc. Probs a good hook.
+          </aside>
+        </section>
+
+        <section class="seventeen">
+          <h1>Performance</h1>
+          <pre class="fragment"><code data-trim data-noescape>
+"express": {
+    "HelloWorld": {
+        "name": "express/HelloWorld",
+        "href": "http://localhost:8001/hello",
+        "hz": 117.92009586903794,
+        "isSlowest": true
+    },
+    "GET_user": {
+        "name": "express/GET_user",
+        "href": "http://localhost:8001/user",
+        "hz": 142.22563563747755,
+        "isFastest": true
+    },
+    "isSlowest": true
+},
+"sails": {
+    "HelloWorld": {
+        "name": "sails/HelloWorld",
+        "href": "http://localhost:1337/hello",
+        "hz": 121.46556906005706,
+        "isFastest": true
+    },
+    "GET_user": {
+        "name": "sails/GET_user",
+        "href": "http://localhost:1337/user",
+        "hz": 95.75379233373307,
+        "isSlowest": true
+    },
+    "isFastest": true
+}
+          </code></pre>
+          <aside class="notes">
+            Here's a quick benchmark I prepared earlier<br>
+            Render of a simple "Hello world" and a single row GET on a MySQL table<br>
+            Obviously a more robust suite would be required for an accurate comparison<br>
+            But it goes to show that there isn't perf detriment from using Sails
+          </aside>
+        </section>
+
+        <section class="eighteen">
+          <h1>Security</h1>
+          <div class="fragment sec">
+            <img data-src="media/sailssec.png" alt="">
+          </div>
+          <span class="fragment">Pretty nifty! But ultimately, just a time saver</span>
+          <aside class="notes">
+            Sails has security in mind OOB<br>
+            Some common attack vectors
+            Express requires some config<br>
+            Attack vectors exist & should mitigate
+          </aside>
+        </section>
+
+        <section class="twentyone">
+          <h1>Documentation</h1>
+					<div class="fragment doc">
+						<img data-src="media/sailsdocs.png" alt="">
+					</div>
+					<h1 class="fragment wat">wat?</h1>
+          <aside class="notes">
+            I could be forgiven for not liking Sails docs<br>
+            Get the job done, patchy in places.<br>
+            Even if I can't see them in portrait mode<br>
+            Not a fan of Express docs either, due dryness, usually look at community QAs for help<br>
+          </aside>
+        </section>
+
+        <section class="nineteen">
+          <h1>Coding Experience</h1>
+          <div class="fragment moss">
+            <img data-src="media/moss1.png" alt="">
+          </div>
+          <aside class="notes">
+            Highly subjective, but not to be overlooked<br>
+            I'm a fan of writing with Sails over Express<br>
+            Also have a lot more friends like Moss rather than Wold of Wall Street<br>
+            With great power, great resp. Express can descend into spaghetti<br>
+            Same possible w/ Sails, but definitely more difficult due opinionated best practice
+          </aside>
+        </section>
+
+        <section class="twentytwo">
+          <h1>FIN</h1>
+          <span>Thanks for listening!</span>
+          <p>
+            Jimmy Cann
+          </p>
+          <p>
+            @yjimk
+          </p>
+          <aside class="notes">
+            Thanks for attending, thanks to Doshii for sponsoring!
+            Did I mention we're hiring?
+          </aside>
+        </section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+        width: 1280,
+        height: 900,
+        center: false,
+        controls: false,
+        progress: false,
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
