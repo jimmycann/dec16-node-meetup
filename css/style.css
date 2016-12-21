@@ -133,3 +133,7 @@
 .reveal .twentyone > div > img {
   width: 400px;
 }
+
+.reveal .twentytwo > h1 {
+  text-transform: none;
+}
